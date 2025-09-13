@@ -13,46 +13,52 @@
     <title>Ecommerce Card</title>
 </head>
 
-<body class="bg-gray-900">
-    <header>
-        <div class="max-w-11/12 mx-auto">
+<body class="bg-gray-900 ">
+    <header class="fixed top-0 left-0 right-0 z-30">
+        <div class="max-w-11/12 mx-auto  z-100">
             <div class="flex justify-between items-center py-4 px-4 bg-gray-700 text-white mb-3 rounded-md">
-                <h1>Ecommerce Cart</h1>
+                <h1 class="cursor-pointer text-xl"><a href="index.html">Ecommerce Cart</a></h1>
                 <div class="relative">
-                    <input type="text" placeholder="search product"
+                    <input id="searchInput" type="text" placeholder="search product"
                         class="p-2 w-[500px] border-2 border-gray-50 rounded-md outline-none hover:outline-none ">
-                    <div class="w-7 h-7 absolute right-1 top-2 cursor-pointer text-xl">
+                    <div id="searchBtn" class="w-7 h-7 absolute right-1 top-2 cursor-pointer text-xl">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </div>
                 </div>
                 <div id="cart-icon" class="relative">
                     <i class="fa-solid fa-cart-shopping"></i>
                     <div class="cursor-pointer">
-                        <p
+                        <p id="itemCount"
                             class="absolute w-6 h-6 -top-3 -right-4 text-lg bg-white text-black rounded-full flex justify-center items-center">
                             0</p>
                     </div>
                 </div>
             </div>
         </div>
+    </header>
+    <aside>
         <div id="cart"
-            class="fixed z-100 top-0 -right-120 w-[500px] h-screen bg-gray-800 p-10 transition-all duration-400 ease overflow-y-auto">
+            class="fixed z-100 top-0 -right-150 w-[500px] h-screen bg-gray-800 p-10 transition-all duration-400 ease overflow-y-auto">
             <h1 class="text-center text-2xl text-white font-bold mb-5">Cart</h1>
-            <div id="cartBox"></div>
+            <div class="border-b-2 border-gray-300 " id="cartBox"></div>
 
-            <div>
-                <h2>Total :</h2>
-                <p>0</p>
+            <div class="my-2 flex justify-between px-5 text-white text-2xl font-bold ">
+                <h2>Total Amount :</h2>
+                <p>$ <span id="TotalAmount">0</span></p>
             </div>
-            <button class="bg-gray-400 py-3 px-4 rounded-md w-full cursor-pointer">Buy Now</button>
+            <button id="buyNow" class="bg-gray-400 py-3 px-4 rounded-md w-full cursor-pointer">Buy Now</button>
             <i id="closeIcon" class="fa-solid fa-xmark absolute top-2 right-2 text-xl text-white cursor-pointer"></i>
         </div>
-    </header>
-    <div class=" max-w-10/12 mx-auto">
-        <div id="cart-container" class="grid grid-cols-4 gap-5">
+    </aside>
+    <section>
+        <div class=" max-w-11/12 mx-auto mt-20 h-screen">
+            <div id="cart-container" class="grid grid-cols-4 gap-5">
+
+            </div>
 
         </div>
-    </div>
+    </section>
+
 
     <script src="script.js"></script>
 </body>
